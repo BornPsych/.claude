@@ -134,40 +134,71 @@ Complexity guide: **S** = < 1 hour, single file. **M** = 1–4 hours, 2–5 file
 
 ---
 
-## Output Template
+## Output Template (Pyramid Style)
 
 ```markdown
 ## Feature Research: [Feature Name]
 
-### Summary
-[2-3 sentence overview of feasibility and approach]
+### Verdict
+**[Feasible/Risky/Not feasible].** [1-sentence recommended approach]. Confidence: [H/M/L]
 
-### Confidence: [High/Medium/Low]
-
-### Codebase Context
-[Key files, patterns, and architecture relevant to this feature]
+### Key Findings
+1. **[Most important discovery]** — `file:line` — [implication]
+2. **[Second finding]** — `file:line` — [implication]
+3. **[Third finding]** — `file:line` — [implication]
 
 ### Recommended Approach
-[Approach with rationale, referencing existing patterns]
+[2-3 sentences: what to build, which pattern to follow, why this over alternatives]
 
-### Architecture Impact
-[Table from Phase 3]
+### Risk Snapshot
+| Dimension | Rating | Note |
+|-----------|--------|------|
+| Complexity | L/M/H | [1-liner] |
+| Breaking Change | L/M/H | [1-liner] |
+| Biggest risk | | [1 sentence] |
 
-### Edge Cases
-[Key edge cases from Phase 4]
-
-### Breaking Changes
-[Assessment from Phase 5, or "None expected"]
-
-### Risk Assessment
-[Matrix from above]
+### Decision Points
+- [ ] [Choice needing human input — my lean: X because Y]
 
 ### Implementation Breakdown
-[Task table from Phase 8]
-
-### Open Questions
-- [ ] [Questions needing human decision]
+| # | Task | Complexity | Dependencies | Files |
+|---|------|-----------|--------------|-------|
+| 1 | [Task] | S/M/L | None | `file` |
+| 2 | [Task] | S/M/L | #1 | `file` |
 
 ### Next Steps
-- [ ] [Suggested follow-up actions]
+- [ ] [Most important follow-up]
+
+---
+## Deep Dives
+
+### Architecture Impact
+| Layer | Impact | Files |
+|-------|--------|-------|
+| [Layer] | [What changes] | `file:line` |
+
+### Edge Cases & Constraints
+- [Edge case 1] — Impact: [severity]
+- [Edge case 2] — Impact: [severity]
+
+### Breaking Changes Assessment
+[Full assessment from Phase 5, or "None expected"]
+
+### Codebase Context
+[Existing patterns, precedents, key files found]
+
+### Full Risk Matrix
+| Dimension | Rating | Notes |
+|-----------|--------|-------|
+| Complexity | | |
+| Breaking Change | | |
+| Performance | | |
+| Security | | |
+| Test Gap | | |
+
+### Optimization Opportunities
+[From Phase 6 — only if found]
+
+### Test Strategy
+[From Phase 7 — only if non-obvious]
 ```

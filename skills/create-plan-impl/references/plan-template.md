@@ -13,155 +13,107 @@ Examples:
 
 ---
 
-## Template
+## Template (Pyramid Style)
 
 ```markdown
 # [Feature/Task Name] Implementation Plan
 
-## Overview
+## Verdict
+**[1-sentence: what we're building and why].** [N] phases, highest risk: [1-sentence risk].
 
-[Brief description of what we're implementing and why - 2-3 sentences]
+## Key Decisions
+1. **[Most important design decision]** — [rationale]
+2. **[Second decision]** — [rationale]
+3. **[Third decision]** — [rationale]
 
-## Current State Analysis
+## Scope
+- **Building:** [what's in scope — 2-3 bullets]
+- **NOT building:** [what's explicitly out of scope]
 
-[What exists now, what's missing, key constraints discovered]
-
-### Key Discoveries:
-- [Important finding with file:line reference]
-- [Pattern to follow]
-- [Constraint to work within]
+## Phases at a Glance
+| # | Phase | What it does | Key files |
+|---|-------|-------------|-----------|
+| 1 | [Name] | [1-liner] | `file.ext` |
+| 2 | [Name] | [1-liner] | `file.ext` |
+| 3 | [Name] | [1-liner] | `file.ext` |
 
 ## Desired End State
-
-[Specification of the end state after this plan is complete]
-
-### How to Verify:
-- [Concrete way to verify success]
-- [Observable behavior change]
-
-## What We're NOT Doing
-
-[Explicitly list out-of-scope items to prevent scope creep]
-
-- NOT: [Out of scope item 1]
-- NOT: [Out of scope item 2]
-
-## Implementation Approach
-
-[High-level strategy and reasoning for the chosen approach]
+[How to verify success — concrete observable behaviors]
 
 ---
+## Phase Details
 
-## Phase 1: [Descriptive Name]
+### Phase 1: [Descriptive Name]
+[What this phase accomplishes — 1-2 sentences]
 
-### Overview
-[What this phase accomplishes - 1-2 sentences]
-
-### Changes Required:
+**Changes:**
 
 #### 1. [Component/File Group]
 **File**: `path/to/file.ext`
-**Changes**: [Summary of changes]
+**Changes**: [Summary]
 
 ```[language]
 // Specific code to add/modify
-// Include enough context for implementation
 ```
 
 #### 2. [Another Component]
 **File**: `path/to/another.ext`
 **Changes**: [Summary]
 
-### Success Criteria:
+**Success Criteria:**
+- [ ] `[test/build command]` passes
+- [ ] [Manual verification step]
 
-#### Automated Verification:
-- [ ] Tests pass: `[test command]`
-- [ ] Type check passes: `[typecheck command]`
-- [ ] Lint passes: `[lint command]`
-- [ ] Build succeeds: `[build command]`
-
-#### Manual Verification:
-- [ ] [Specific behavior to verify manually]
-- [ ] [Edge case to test]
-- [ ] [Performance check]
-
-**Checkpoint**: Pause for manual confirmation before proceeding to Phase 2.
+**Checkpoint**: Pause for confirmation before Phase 2.
 
 ---
 
-## Phase 2: [Descriptive Name]
-
-### Overview
+### Phase 2: [Descriptive Name]
 [What this phase accomplishes]
 
-### Changes Required:
+**Changes:**
 
 #### 1. [Component]
 **File**: `path/to/file.ext`
 **Changes**: [Summary]
 
-```[language]
-// Code changes
-```
-
-### Success Criteria:
-
-#### Automated Verification:
-- [ ] [Automated checks]
-
-#### Manual Verification:
-- [ ] [Manual checks]
+**Success Criteria:**
+- [ ] [Automated check]
+- [ ] [Manual check]
 
 ---
 
-## Phase 3: [Descriptive Name]
-
+### Phase 3: [Descriptive Name]
 [Continue pattern as needed...]
 
 ---
+## Appendix
 
-## Testing Strategy
+### Current State Analysis
+[What exists now, key constraints discovered]
+- [Finding with `file:line`]
+- [Pattern to follow]
 
-### Unit Tests:
-- [What to test]
-- [Key edge cases]
-- [Mocking strategy]
+### Testing Strategy
+- **Unit**: [What to test, key edge cases]
+- **Integration**: [E2E scenarios]
+- **Manual**: [Steps to verify]
 
-### Integration Tests:
-- [End-to-end scenarios]
-- [API contract tests]
+### Performance Considerations
+[Only if applicable — skip if none]
 
-### Manual Testing Steps:
-1. [Specific step to verify feature]
-2. [Another verification step]
-3. [Edge case to test manually]
+### Migration Notes
+[Only if applicable — include rollback plan]
 
-## Performance Considerations
+### Security Considerations
+[Only if applicable]
 
-[Any performance implications or optimizations needed]
+### References
+- `[file:line]` — [description]
+- [External link] — [description]
 
-- [Consideration 1]
-- [Consideration 2]
-
-## Migration Notes
-
-[If applicable, how to handle existing data/systems]
-
-- [Migration step 1]
-- [Rollback plan]
-
-## Security Considerations
-
-[If applicable, security implications]
-
-- [Security consideration 1]
-- [Input validation needed]
-
-## References
-
-- Related files: `[file:line]`
-- Similar implementation: `[file:line]`
-- External docs: [link]
+### Unresolved Questions
+- [ ] [Questions that still need answers]
 ```
 
 ---

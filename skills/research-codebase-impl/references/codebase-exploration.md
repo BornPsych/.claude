@@ -106,39 +106,54 @@ Task(subagent_type="codebase-analyzer", prompt="Deep-dive into [specific module]
 
 ---
 
-## Output Template
+## Output Template (Pyramid Style)
 
 ```markdown
 ## Codebase Exploration: [Area/Topic]
 
-### Confidence: [High/Medium/Low]
-- High: Read and traced actual code paths
-- Medium: Inferred from patterns and naming
-- Low: Limited evidence, marked [UNVERIFIED]
+### Verdict
+[1-sentence: what this area does and how it's structured]. Confidence: [H/M/L]
 
-### Project Overview
-[5-line summary from Phase 1]
+### Key Findings
+1. **[Most important architectural insight]** — `file:line`
+2. **[Second key thing to know]** — `file:line`
+3. **[Third key thing]** — `file:line`
+
+### How It Works (short)
+1. `file:line` — [Step 1]
+2. `file:line` — [Step 2]
+3. `file:line` — [Step 3]
+
+### Architecture Layers
+| Layer | Purpose | Key Files |
+|-------|---------|-----------|
+| Entry | [What] | `file:line` |
+| Logic | [What] | `file:line` |
+| Data | [What] | `file:line` |
+
+### Next Steps
+- [ ] [Areas worth deeper investigation]
+- [ ] [Questions for the team]
+
+---
+## Deep Dives
 
 ### Tech Stack
-- Language: [X]
-- Framework: [X]
-- Build: [X]
-- Test: [X]
-- Key deps: [X, Y, Z]
-
-### Architecture
-[Layer table from Phase 2]
-
-### Representative Request Trace
-1. `file:line` — [Step description]
-2. `file:line` — [Step description]
-...
+| Category | Technology |
+|----------|------------|
+| Language | [X] |
+| Framework | [X] |
+| Key deps | [X, Y, Z] |
 
 ### Module Dependencies
-[Fan-in/fan-out from Phase 3]
+- **Fan-out** (depends on): [list]
+- **Fan-in** (depended on by): [list]
+- **Critical coupling points**: [high fan-in modules]
 
 ### Patterns & Conventions
-[Pattern table from Phase 4]
+| Pattern | Where Used | Example |
+|---------|-----------|---------|
+| [Pattern] | [Scope] | `file:line` |
 
 ### [Deep Dive: Module Name] (if applicable)
 [Phase 5 results]
@@ -146,8 +161,4 @@ Task(subagent_type="codebase-analyzer", prompt="Deep-dive into [specific module]
 ### Unknowns & Gaps
 - [UNVERIFIED] [Things inferred but not confirmed]
 - [NOT FOUND] [Things looked for but not located]
-
-### Next Steps
-- [ ] [Areas worth deeper investigation]
-- [ ] [Questions for the team/maintainers]
 ```

@@ -113,50 +113,54 @@ Connect findings to the user's actual context:
 
 ---
 
-## Output Template
+## Output Template (Pyramid Style)
 
 ```markdown
 ## Research: [Topic]
 
-### Summary
-[3-5 sentence overview of key findings and recommendation]
+### Verdict
+**[1-sentence recommendation / answer].** Confidence: [H/M/L]
 
-### Confidence: [High/Medium/Low]
-- High: Multiple authoritative sources agree
-- Medium: Some sources, minor contradictions
-- Low: Limited sources, significant gaps
+### Key Findings
+1. **[Most important finding]** — [source] — [so-what for our context]
+2. **[Second finding]** — [source] — [so-what]
+3. **[Third finding]** — [source] — [so-what]
 
-### Core Findings
+### Recommendation
+[2-3 sentences: what to do, why, what to avoid]
 
-#### [Sub-topic 1]
-[Findings with source references]
+### Trade-offs
+| Approach | Pros | Cons | Best When |
+|----------|------|------|-----------|
+| [Option A] | | | |
+| [Option B] | | | |
 
-#### [Sub-topic 2]
-[Findings with source references]
+### Next Steps
+- [ ] [Most important follow-up]
+- [ ] [Prototyping suggestion]
 
-#### [Sub-topic 3]
-[Findings with source references]
+---
+## Deep Dives
 
-### Comparison / Trade-offs
-[Trade-offs table from Phase 5]
+### [Sub-topic 1]
+[Detailed findings with source references]
 
-### Source Assessment
-[Credibility table from Phase 3]
+### [Sub-topic 2]
+[Detailed findings with source references]
+
+### [Sub-topic 3]
+[Detailed findings with source references]
 
 ### Contradictions & Caveats
 - [Where sources disagree and why]
 - [SINGLE SOURCE] [Claims from only one source]
 
-### Practical Recommendation
-[What to do, based on user's context]
+### Source Assessment
+| Source | Authority | Recency | Relevance | Priority |
+|--------|-----------|---------|-----------|----------|
+| [Source + link] | H/M/L | [Date] | H/M/L | 1-5 |
 
-### Sources
+### All Sources
 - [Source 1](link) — [Brief description]
 - [Source 2](link) — [Brief description]
-- ...
-
-### Next Steps
-- [ ] [Follow-up research topics]
-- [ ] [Prototyping suggestions]
-- [ ] [Questions to answer with more context]
 ```

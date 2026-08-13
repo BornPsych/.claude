@@ -81,20 +81,19 @@ Get approval on outline before details:
 Does this phasing make sense?
 ```
 
-### Phase 4: Write Detailed Plan
+### Phase 4: Write Detailed Plan (Pyramid Style)
 
 Use the plan template (see [references/plan-template.md](references/plan-template.md)):
 
 **File naming:** `.claude/plans/YYYY-MM-DD-description.md`
 - Example: `.claude/plans/2025-01-08-user-authentication.md`
 
-**Key sections:**
-- Overview
-- Current State Analysis
+**Pyramid structure — reader should get the gist in 30 seconds:**
+- Verdict (1-sentence what + why)
+- Key Decisions (top 3 design choices)
+- Scope (in/out) + Phases at a Glance (table)
 - Desired End State
-- What We're NOT Doing
-- Phased Implementation (with success criteria)
-- Testing Strategy
+- `---` divider → Phase Details, Appendix (testing, migration, security, refs)
 
 ### Phase 5: Review & Iterate
 

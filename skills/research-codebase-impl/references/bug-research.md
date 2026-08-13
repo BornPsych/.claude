@@ -119,40 +119,63 @@ Check:
 - Known workarounds already in place
 - Open issues mentioning similar symptoms
 
-## Phase 6: Structured Report
+## Phase 6: Structured Report (Pyramid Style)
 
 ```markdown
 ## Bug Research: [Issue Summary]
 
-### Confidence: [High/Medium/Low]
+### Verdict
+**Root cause:** [1-sentence root cause] at `file:line`. Confidence: [H/M/L]
 
-### Problem Definition
-[Table from Phase 1]
+### Key Findings
+1. **[Root cause]** — `file:line` — [why this breaks things]
+2. **[Blast radius]** — [N callers / N features affected] — [severity]
+3. **[Recommended fix]** — `file:line` — [what to change + effort S/M/L]
 
-### 5 Whys Chain
+### 5 Whys → Root Cause
 1. → [Why 1]
 2. → [Why 2]
 3. → [Why 3]
 4. → [Why 4]
 5. → **Root Cause**: [Why 5]
 
-### Hypotheses
-[Table from Phase 3, ranked by confidence]
+### Recommended Fix
+| Fix | Location | Regression Risk | Effort |
+|-----|----------|----------------|--------|
+| [Best fix] | `file:line` | L/M/H | S/M/L |
 
-### Traced Execution Path
+### Next Steps
+- [ ] [Most important verification]
+- [ ] [Tests to add]
+
+---
+## Deep Dives
+
+### Problem Definition
+[Table from Phase 1]
+
+### Hypotheses (ranked by confidence)
+| # | Hypothesis | Confidence | Supporting Evidence | Contradicting Evidence |
+|---|-----------|------------|--------------------|-----------------------|
+| 1 | [Hypothesis] | H/M/L | [Evidence] | [Counter-evidence] |
+
+### Full Execution Trace
 1. `file.ts:line` — [What happens]
 2. `file.ts:line` — [What happens]
 3. **FAILURE**: `file.ts:line` — [Where it breaks and why]
 
-### Blast Radius
-[Table from Phase 4]
+### Blast Radius Detail
+| Scope | Affected | Severity |
+|-------|----------|----------|
+| Direct callers | N files/functions | |
+| Transitive consumers | N components | |
+| User-facing features | [List] | |
 
-### Evidence
+### All Evidence
 - `file.ts:45` — [What was found]
 - `file.ts:123` — [Related code]
 
-### Fix Options
-
+### All Fix Options
 | # | Fix | Location | Regression Risk | Effort |
 |---|-----|----------|----------------|--------|
 | 1 | [Quick fix] | `file:line` | L/M/H | S/M/L |
@@ -161,9 +184,4 @@ Check:
 
 ### Related Bugs & Patterns
 [Findings from Phase 5]
-
-### Next Steps
-- [ ] [Verification steps]
-- [ ] [Tests to add]
-- [ ] [Related code to audit]
 ```

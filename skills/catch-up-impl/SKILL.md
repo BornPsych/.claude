@@ -101,69 +101,64 @@ Task(subagent_type="Explore", prompt="Identify database models and schema")
 Task(subagent_type="Explore", prompt="Find test patterns and coverage")
 ```
 
-## Output Format
+## Output Format (Pyramid Style)
 
 ```markdown
-## Catch-Up Report: {project_name}
-**Generated**: {date}
-**Branch**: {current_branch}
-**Commits Analyzed**: {count}
+## Catch-Up: {project_name}
+**Branch**: {current_branch} | **Commits**: {count} | **Generated**: {date}
+
+### What's Happening (30-second summary)
+1. **[Biggest theme]** — {description} ({X commits})
+2. **[Second theme]** — {description} ({X commits})
+3. **[Third theme]** — {description} ({X commits})
+
+### Current State
+- **In progress**: {what's actively being worked on}
+- **Recently shipped**: {what just landed}
+- **Next up**: {inferred next steps}
+
+### Quick Start
+```bash
+{dev command}     # start dev
+{test command}    # run tests
+```
+
+### Key Entry Points
+1. **Main App**: `{file:line}` — {description}
+2. **API Routes**: `{folder}` — {pattern}
+3. **DB Models**: `{file}` — {tables/models}
 
 ---
+## Deep Dives
 
-### Recent Progress Summary
-
-#### Key Themes (Last {count} Commits)
-- [Theme 1]: {description} ({X commits})
-- [Theme 2]: {description} ({X commits})
-- [Theme 3]: {description} ({X commits})
-
-#### Active Areas
+### Active Areas
 | Area | Files Changed | Nature of Changes |
 |------|---------------|-------------------|
 | {area1} | {count} | {what's happening} |
 | {area2} | {count} | {what's happening} |
 
-#### Recent Contributors
+### Recent Contributors
 - {name}: {focus areas}
 
----
-
 ### Project Structure
-
 ```
 {directory tree with descriptions}
 ```
 
-#### Folder Guide
+### Folder Guide
 | Folder | Purpose | Key Files |
 |--------|---------|-----------|
 | `src/` | {what lives here} | `{important files}` |
 | `lib/` | {what lives here} | `{important files}` |
 
----
-
 ### Tech Stack
-
 | Category | Technology |
 |----------|------------|
 | Framework | {framework} |
 | Database | {db} |
 | Testing | {test framework} |
-| Styling | {css approach} |
 
----
-
-### Key Entry Points
-
-1. **Main App**: `{file:line}` - {description}
-2. **API Routes**: `{folder}` - {pattern}
-3. **DB Models**: `{file}` - {tables/models}
-
----
-
-### Development Commands
-
+### All Development Commands
 ```bash
 # Start dev
 {command}
@@ -173,23 +168,10 @@ Task(subagent_type="Explore", prompt="Find test patterns and coverage")
 
 # Build
 {command}
+
+# Lint
+{command}
 ```
-
----
-
-### Current State
-
-- **Open work**: {what's in progress based on recent commits}
-- **Recent fixes**: {bugs addressed}
-- **Upcoming**: {inferred next steps}
-
----
-
-### Quick Start Suggestions
-
-1. {First thing to do}
-2. {Second thing}
-3. {Third thing}
 ```
 
 ## Guidelines

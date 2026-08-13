@@ -60,6 +60,15 @@ Ask 3-5 questions before decomposing:
 4. Success criteria
 5. Prior attempts
 
+**Breaking changes gate** — also ask these when relevant (skip if clearly N/A):
+- Does this need backward compatibility with existing data/APIs/formats? (e.g., old manifests, DB schemas, config files)
+- Can existing callers/consumers break? Or must old behavior be preserved?
+- Are there persisted artifacts (files on disk, DB rows, serialized formats) that would become invalid?
+- Is a migration path needed, or is a clean break acceptable?
+- Will this change any public CLI flags, config keys, or output formats?
+
+These questions can surface "no, just break it" answers early — which dramatically simplifies the breakdown. Flag any question where the answer is "no" as a simplification opportunity.
+
 **Wait for answers before proceeding.**
 
 ### Phase 5: MECE Decomposition
@@ -91,31 +100,55 @@ For each component:
 - What are fundamental truths?
 - Could this be done differently?
 
-## Output Structure
+## Output Structure (Pyramid Style)
 
 ```
 ## Problem Breakdown: [Title]
 
-### Classification
-Cynefin Domain + reasoning
+### Verdict
+**[Cynefin domain]: [1-sentence problem classification].** [N] components, highest risk: [1-liner].
 
-### Context Discovered
-Codebase findings
-
-### Root Cause (if applicable)
-5 Whys chain
-
-### MECE Validation
-Overlap/gap check
-
-### Components
-Each with: tasks, dependencies, verification
+### Key Components (ranked by priority)
+1. **[Component 1]** — [what + why it's first] — Complexity: S/M/L
+2. **[Component 2]** — [what + dependency] — Complexity: S/M/L
+3. **[Component 3]** — [what] — Complexity: S/M/L
 
 ### Execution Order
-Dependency-aware sequence
+[Component 1] → [Component 2] → [Component 3]
+(with dependency arrows showing what blocks what)
 
-### Risks
-Risk register with mitigation
+### Top Risks
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| [Risk 1] | H/M/L | H/M/L | [1-liner] |
+| [Risk 2] | H/M/L | H/M/L | [1-liner] |
+
+---
+## Deep Dives
+
+### Classification Detail
+Cynefin Domain: [domain] — [reasoning for this classification]
+
+### Root Cause (if applicable)
+1. → [Why 1]
+2. → [Why 2]
+3. → [Why 3]
+4. → [Why 4]
+5. → **Root Cause**: [Why 5]
+
+### Context Discovered
+[Codebase findings with file:line refs]
+
+### MECE Validation
+- Split type: [by layer / by flow / by CRUD / custom]
+- Overlap check: [any overlaps found]
+- Gap check: [any gaps found]
+
+### Component Details
+Each with: sub-tasks, dependencies, verification criteria
+
+### First Principles Check
+[Assumptions challenged, alternative approaches considered]
 ```
 
 ## Framework Selection Guide
