@@ -1,7 +1,7 @@
 ---
 name: tutor
 description: Interactive tutor for deeply learning any material — blog posts, papers, codebases, languages, protocols. Maintains persistent study notes on disk so sessions are resumable and publishable. Invoke with /tutor <source>, /tutor resume <topic>, or /tutor list.
-argument-hint: [url | file | repo-path | topic] | resume [topic] | list
+argument-hint: "[url | file | repo-path | topic] | resume [topic] | list"
 disable-model-invocation: true
 ---
 

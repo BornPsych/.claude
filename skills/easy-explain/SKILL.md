@@ -5,7 +5,8 @@ description: Explain something in simple words, in plain paragraphs, with NO ana
 
 # Easy Explain
 
-Explain one thing, plainly, short, no analogies.
+Explain one thing, plainly, short, no analogies. Restate it more simply and concisely, like one
+human talking to another — stop using jargon and speak coherently.
 
 ## Arguments
 
@@ -15,7 +16,7 @@ Explain one thing, plainly, short, no analogies.
   Treat it as a target, not a hard cap: land within roughly ±20%. If the honest answer needs more,
   spend the extra lines and say nothing about having done so.
 - **`subject`** — everything after the number. Resolve in this order:
-  1. **Empty** → explain whatever was just discussed: the previous answer, plan, diff, or error.
+  1. **Empty** → restate your last message: the previous answer, plan, diff, or error.
      If several things were in play, pick the one the user most likely stumbled on and name it in
      the first sentence so a wrong guess is obvious and cheap to correct.
   2. **A path, or a path-like token** (`src/eval.rs`, `eval.rs:120`, `foo/`) → read it, then explain
@@ -35,6 +36,12 @@ mechanism, not a better comparison.
 **Plain paragraphs.**
 Continuous prose. Short sentences. No headers, no bullet lists, no tables, no bold-label runs, no
 numbered steps unless the subject is genuinely a sequence. One idea per sentence.
+
+**Stop using jargon and speak coherently, like one human talking to another.**
+State it more simply and concisely than the original. Drop buzzwords, acronyms the user has not
+used, and insider shorthand — if a term is not doing real work, replace it with the everyday word.
+Sentences should connect: each one follows from the last, the way you would explain it out loud to
+a colleague, not the way documentation reads.
 
 **Keep the real term, gloss it once.**
 Use the correct technical word, then define it inline in a few words the first time it appears —
