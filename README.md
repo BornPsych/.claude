@@ -15,8 +15,11 @@ Skills load automatically; commands become available as `/breakdown`, `/research
 
 | Skill | What it does |
 |---|---|
+| [adhd](skills/adhd/SKILL.md) | Rephrase the last message for a reader with ADHD — next action first, numbered steps, no preamble |
 | [breakdown-impl](skills/breakdown-impl/SKILL.md) | Structure problems without solving them — MECE decomposition, Cynefin classification, 5 Whys, WBS |
+| [bro](skills/bro/SKILL.md) | Re-explain the previous answer the way a friend would say it out loud — zero jargon, short and warm |
 | [catch-up-impl](skills/catch-up-impl/SKILL.md) | Onboard to a codebase — recent commits, project structure, development patterns |
+| [chirp](skills/chirp/SKILL.md) | Manage sessions, projects and epics through the xirp CLI — resume sessions, launch background agents, manage worktrees |
 | [commit](skills/commit/SKILL.md) | Split staged/unstaged changes into N well-structured commits on a fresh branch and open a PR |
 | [create-plan-impl](skills/create-plan-impl/SKILL.md) | Create phased implementation plans with success criteria through research and iteration |
 | [design-an-interface](skills/design-an-interface/SKILL.md) | Generate radically different interface designs for a module using parallel sub-agents |
@@ -43,6 +46,7 @@ Slash commands are thin wrappers that invoke the matching skill (most pin the mo
 | `/catch-up` | catch-up-impl |
 | `/create-plan` | create-plan-impl |
 | `/enhance-prompt` | enhance-prompt-impl |
+| `/fork-tmux` | standalone — forks the current conversation into a new vertical tmux pane |
 | `/pr-describe` | standalone — generates a PR description with AI disclosure (text only, no git commands) |
 | `/research` | research-codebase-impl |
 | `/validate-research` | validate-research-impl |
