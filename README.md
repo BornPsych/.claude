@@ -27,11 +27,17 @@ Skills load automatically; commands become available as `/breakdown`, `/research
 | [ecdsafail-cli](skills/ecdsafail-cli/SKILL.md) | Drive the ecdsafail CLI for the ECDSA Fail benchmark — setup, runs, submissions |
 | [enhance-prompt-impl](skills/enhance-prompt-impl/SKILL.md) | Optimize prompts for Claude — XML structure, chain-of-thought, few-shot examples |
 | [find-skills](skills/find-skills/SKILL.md) | Discover and install agent skills when looking for new capabilities |
+| [frontend-design](skills/frontend-design/SKILL.md) | Build distinctive, production-grade frontend interfaces that avoid generic AI aesthetics |
 | [grill-me](skills/grill-me/SKILL.md) | Relentlessly interview you about a plan or design until every branch of the decision tree is resolved |
+| [grilling](skills/grilling/SKILL.md) | Grill you about a plan, decision or idea, mapping every decision as a design tree |
 | [humanizer](skills/humanizer/SKILL.md) | Remove signs of AI-generated writing from text, based on Wikipedia's "Signs of AI writing" guide |
 | [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) | Find architectural improvements that make a codebase more testable by deepening shallow modules |
+| [magnitude](skills/magnitude/SKILL.md) | Operate Magnitude local inference through its headless CLI — models, hardware fit, harness setup |
 | [meeting-save](skills/meeting-save/SKILL.md) | Archive Wispr Flow meeting audio + transcripts before the app's 24-hour purge; outputs a fused-mono main track and a denoised, silence-trimmed mic-only track |
+| [opengradient-sdk](skills/opengradient-sdk/SKILL.md) | Write code with the OpenGradient SDK — LLM inference, tool calling, on-chain inference, model hub |
 | [research-codebase-impl](skills/research-codebase-impl/SKILL.md) | Investigate a codebase — find files, trace data flow, understand architecture, debug errors |
+| [retro](skills/retro/SKILL.md) | Run a retrospective on a coding session |
+| [source-command-fork-tmux](skills/source-command-fork-tmux/SKILL.md) | Skill form of `/fork-tmux` — fork the current conversation into a new vertical tmux pane |
 | [tdd](skills/tdd/SKILL.md) | Test-driven development with a red-green-refactor loop and interface-design references |
 | [tutor](skills/tutor/SKILL.md) | Interactive tutor for deeply learning any material, with persistent resumable study notes |
 | [validate-research-impl](skills/validate-research-impl/SKILL.md) | Validate research findings with skeptical parallel agents and alternative hypotheses |
